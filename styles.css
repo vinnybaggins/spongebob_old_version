@@ -21,7 +21,7 @@ html{
     height: 100vh;
     width: 100vh;
     outline: rgb(1, 0, 56) solid 2px;
-    background-image: url(../images/jellyfish-fields.jpg);
+    background-image: url(jellyfish-fields.jpg);
     background-size: cover;
     overflow: hidden;
     margin-left: auto;
