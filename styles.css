@@ -35,30 +35,6 @@ html{
     background-color: rgba(9, 8, 41, 0.712);
 }
 
-/* characters */
-
-#bob{
-    background-color: #ebff33;
-    outline: #ccdd35 solid 2px;
-    border-radius: 5px;
-    height: 4vh;
-    width: 4vh;
-    position: absolute;
-    margin: 1px;
-    z-index: 1;
-}
-
-#patrick{
-    background-color: #fcb3ea;
-    outline: #f1a5de solid 2px;
-    border-radius: 5px;
-    height: 4vh;
-    width: 4vh;
-    position: absolute;
-    margin: 1px;
-    z-index: 0;
-}
-
 /* Return button */
 
 #return{
@@ -81,3 +57,44 @@ html{
     font-size: medium;
     font-weight: bold;
 }
+
+/* characters */
+
+#bob{
+    background-color: #ebff33;
+    outline: 2px solid #ccdd35;
+    outline-offset: -2px;
+
+    border-radius: 5px;
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+    
+    overflow: hidden;
+}
+
+#patrick{
+    background-color: #fcb3ea;
+    outline: 2px solid #d695c6;
+    outline-offset: -2px;
+
+    border-radius: 5px;
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+
+    overflow: hidden;
+}
+
+/*#jellyfish{
+    background-color: #ff91e4;
+    outline: #ee9cda solid 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 4vh;
+    width: 4vh;
+    position: absolute;
+    margin: 1px;
+    z-index: 0;
+    display: flex;
+}*/
