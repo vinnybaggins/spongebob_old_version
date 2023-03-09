@@ -85,16 +85,3 @@ html{
 
     overflow: hidden;
 }
-
-/*#jellyfish{
-    background-color: #ff91e4;
-    outline: #ee9cda solid 2px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    height: 4vh;
-    width: 4vh;
-    position: absolute;
-    margin: 1px;
-    z-index: 0;
-    display: flex;
-}*/
