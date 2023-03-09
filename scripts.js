@@ -30,7 +30,9 @@ addEventListener("load", function(){
 //Movimentos
 
 addEventListener('keydown',function(e){
-
+    if(e.key != "F5"){
+    e.preventDefault();
+    console.log(e.key);
     switch(e.key){
         //Bob
         case 'ArrowLeft':
@@ -59,7 +61,7 @@ addEventListener('keydown',function(e){
             keysPressed.s = true;
         break;
     }
-
+    }
 })
 
 addEventListener('keyup',function(e){
@@ -103,123 +105,211 @@ function moveCharacter() {
     if (keysPressed.a && keysPressed.w) {
 
         if (parseInt(patrick.style.left) != 0) {
-            patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+                
+            if(parseInt(patrick.style.left) != parseInt(bob.style.left) + 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+            }
+
         }
         if (parseInt(patrick.style.top) != 0) {
-            patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) + 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+            }
         }
 
     } else if (keysPressed.a && keysPressed.s) {
 
         if (parseInt(patrick.style.left) != 0) {
-            patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+                
+            if(parseInt(patrick.style.left) != parseInt(bob.style.left) + 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+            }
+
         }
         if (parseInt(patrick.style.top) != 96) {
-            patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) - 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     } else if (keysPressed.d && keysPressed.w) {
 
         if (parseInt(patrick.style.left) != 96) {
-            patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                
+                if(parseInt(patrick.style.left) != parseInt(bob.style.left) - 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                    patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                }
+
         }
         if (parseInt(patrick.style.top) != 0) {
-            patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) + 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+            }
         }
 
     } else if (keysPressed.d && keysPressed.s) {
 
         if (parseInt(patrick.style.left) != 96) {
-            patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                
+                if(parseInt(patrick.style.left) != parseInt(bob.style.left) - 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                    patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                }
+
         }
         if (parseInt(patrick.style.top) != 96) {
-            patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) - 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     } else if (keysPressed.a) {
 
         if (parseInt(patrick.style.left) != 0) {
-            patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+                
+            if(parseInt(patrick.style.left) != parseInt(bob.style.left) + 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                patrick.style.left = parseInt(patrick.style.left) - stepLength + 'vh';
+            }
+
         }
 
     } else if (keysPressed.d) {
 
         if (parseInt(patrick.style.left) != 96) {
-            patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                
+                if(parseInt(patrick.style.left) != parseInt(bob.style.left) - 4 || parseInt(patrick.style.top) >= (parseInt(bob.style.top) + 4) || parseInt(patrick.style.top) <= (parseInt(bob.style.top) - 4)){
+                    patrick.style.left = parseInt(patrick.style.left) + stepLength + 'vh';
+                }
+
         }
 
     } else if (keysPressed.w) {
 
         if (parseInt(patrick.style.top) != 0) {
-            patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) + 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) - stepLength + 'vh';
+            }
         }
+        
 
     } else if (keysPressed.s) {
 
         if (parseInt(patrick.style.top) != 96) {
-            patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+
+            if(parseInt(patrick.style.top) != parseInt(bob.style.top) - 4 || parseInt(patrick.style.left) >= (parseInt(bob.style.left) + 4) || parseInt(patrick.style.left) <= (parseInt(bob.style.left) - 4)){
+                patrick.style.top = parseInt(patrick.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     }
 
     if (keysPressed.arrowLeft && keysPressed.arrowUp) {
 
-        if (parseInt(bob.style.left) != 0) {
-            bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
-        }
-        if (parseInt(bob.style.top) != 0) {
-            bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
-        }
-
+            if (parseInt(bob.style.left) != 0) {
+                if(parseInt(bob.style.left) != parseInt(patrick.style.left) + 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                    bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
+                }
+            }
+            if (parseInt(bob.style.top) != 0) {
+                if(parseInt(bob.style.top) != parseInt(patrick.style.top) + 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                    bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
+                }
+            }
+        
     } else if (keysPressed.arrowLeft && keysPressed.arrowDown) {
 
         if (parseInt(bob.style.left) != 0) {
-            bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
+                
+            if(parseInt(bob.style.left) != parseInt(patrick.style.left) + 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
+            }
+
         }
         if (parseInt(bob.style.top) != 96) {
-            bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+
+            if(parseInt(bob.style.top) != parseInt(patrick.style.top) - 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     } else if (keysPressed.arrowRight && keysPressed.arrowUp) {
-
+        
         if (parseInt(bob.style.left) != 96) {
-            bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                
+                if(parseInt(bob.style.left) != parseInt(patrick.style.left) - 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                    bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                }
+
         }
         if (parseInt(bob.style.top) != 0) {
-            bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
+
+            if(parseInt(bob.style.top) != parseInt(patrick.style.top) + 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
+            }
         }
 
     } else if (keysPressed.arrowRight && keysPressed.arrowDown) {
 
         if (parseInt(bob.style.left) != 96) {
-            bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                
+                if(parseInt(bob.style.left) != parseInt(patrick.style.left) - 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                    bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                }
+
         }
         if (parseInt(bob.style.top) != 96) {
-            bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+
+            if(parseInt(bob.style.top) != parseInt(patrick.style.top) - 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     } else if (keysPressed.arrowLeft) {
 
         if (parseInt(bob.style.left) != 0) {
-            bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
+                
+            if(parseInt(bob.style.left) != parseInt(patrick.style.left) + 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                bob.style.left = parseInt(bob.style.left) - stepLength + 'vh';
+            }
+
         }
 
     } else if (keysPressed.arrowRight) {
 
         if (parseInt(bob.style.left) != 96) {
-            bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                
+                if(parseInt(bob.style.left) != parseInt(patrick.style.left) - 4 || parseInt(bob.style.top) >= (parseInt(patrick.style.top) + 4) || parseInt(bob.style.top) <= (parseInt(patrick.style.top) - 4)){
+                    bob.style.left = parseInt(bob.style.left) + stepLength + 'vh';
+                }
+
         }
 
     } else if (keysPressed.arrowUp) {
 
         if (parseInt(bob.style.top) != 0) {
-            bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
+
+            if(parseInt(bob.style.top) != parseInt(patrick.style.top) + 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                bob.style.top = parseInt(bob.style.top) - stepLength + 'vh';
+            }
         }
 
     } else if (keysPressed.arrowDown) {
 
         if (parseInt(bob.style.top) != 96) {
-            bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+
+            if(parseInt(bob.style.top) != parseInt(patrick.style.top) - 4 || parseInt(bob.style.left) >= (parseInt(patrick.style.left) + 4) || parseInt(bob.style.left) <= (parseInt(patrick.style.left) - 4)){
+                bob.style.top = parseInt(bob.style.top) + stepLength + 'vh';
+            }
+            
         }
 
     }
