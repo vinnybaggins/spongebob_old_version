@@ -1,5 +1,3 @@
-//Personagens
-
 const bob = document.querySelector('#bob');
 
 const patrick = document.querySelector('#patrick');
@@ -17,8 +15,6 @@ let keysPressed = {
     arrowRight: false
 }
 
-//Inicialização
-
 addEventListener("load", function(){
     bob.style.left = "46vh";
     bob.style.top = "48vh";
@@ -26,8 +22,6 @@ addEventListener("load", function(){
     patrick.style.top = "48vh";
 
 })
-
-//Movimentos
 
 addEventListener('keydown',function(e){
     if(e.key != "F5"){
