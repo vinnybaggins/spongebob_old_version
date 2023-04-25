@@ -12,4 +12,4 @@ I noticed that, unless the computer running the code is very powerful and fast, 
 Apparently, that's the reason why canvas tag exists. To move an actual div is not the best way of doing it. The right way would be draw things on the canvas.
 So I'm learning how to handle the canvas, and then I will redo this project using it.
 
-github.com/vinnybaggins/spongebob
+github.com/vinnybaggins/spongebob_old_version
